@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=,, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+        width: 100vw;
+        height: 100vh;
+        background-image: url("https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1688,w_3000,x_0,y_0/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1683930620/051323-taylorswift-hero_wgf2lt");
+        filter: blur();
+      }
+      .box {
+        flex: 1;
+        height: 30%;
+        max-width: 30%;
+        background-image: url("https://wp.dailybruin.com/images/2022/11/web.ae_.winnertakesallswift.courtesy.jpg");
+        background-repeat: no-repeat;
+        filter: grayscale(1);
+        background-position: center;
+        background-size: cover;
+        border-radius: 15px;
+        transition: all 0.2s;
+      }
+      .box:hover {
+        flex: 2;
+        background-color: rgb(64, 198, 207);
+        filter: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>
