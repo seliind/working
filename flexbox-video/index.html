@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .nav-list {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        border: 1.5px solid black;
+      }
+      .nav-list li {
+        flex-grow: 1;
+        flex-shrink: 1;
+        border: 1px solid red;
+      }
+      hr {
+        margin: 20px;
+      }
+      .card {
+        background-color: crimson;
+        color: white;
+      }
+      .columns {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+      .columns > * {
+        /* flex: 1; bununla aşağıdaki 3 kod aynı şeyi yapıyor*/
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0;
+      }
+
+      @media (min-width: 750px) {
+        .columns {
+          flex-direction: row;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Flexbox made simple</h1>
+    <header>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Information Service</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <hr />
+    <main>
+      <h1>Flexbox vs Grid</h1>
+      <section class="cards">
+        <h2>Some Cards</h2>
+        <div class="columns">
+          <article class="card">
+            <h3>This love</h3>
+            This love is good this love is bad.
+          </article>
+          <article class="card">
+            <h3>You're on your own kid</h3>
+            Summer went away, still the yearning stays.
+          </article>
+          <article class="card">
+            <h3>Hoax</h3>
+            Don't want no other shade of blue but you. No other saddness in the
+            worls would do. My only one, my smoking gun. My eclipsed sun you
+            have broken my heart. My twisted knide, my winless fight this has
+            frozen my ground. Stood on the cliffside screaming give me a reason!
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
