@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: 1fr 2fr;
+      }
+      .box {
+        display: inline;
+        padding: 20px;
+        background-color: burlywood;
+        border: 1px solid brown;
+      }
+      .box.cemre {
+        grid-row-start: 1;
+        grid-row-end: 5;
+        /*Bu ikisinin shorthand'i grid-row: 1 / 5;  eğer buraya span 5 yazarsan da 5 tane kadar yer kaplar*/
+        grid-column-start: 2;
+        background-color: chocolate;
+        color: white;
+      }
+      .box.item8 {
+        grid-area: 1/4/5/6;
+        background-color: coral;
+        opacity: 0.8;
+        color: white;
+      }
+      hr {
+        margin-top: 20px;
+      }
+      .grid-container {
+        display: grid;
+        gap: 10px;
+        background-color: cadetblue;
+        padding: 10px;
+        grid-template-areas: "elma elma elma elma elma";
+      }
+
+      .grid-container > div {
+        background-color: cornsilk;
+        padding: 20px 0;
+        text-align: center;
+        font-size: 15px;
+      }
+      .item5 {
+        grid-area: elma;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">selin ve cemre ve arwen</div>
+      <div class="box">selin ve cemre ve arwen</div>
+      <div class="box">selin ve cemre ve arwen</div>
+      <div class="box">selin ve cemre ve arwen</div>
+      <div class="box">selin ve cemre ve arwen</div>
+      <div class="box">selin ve cemre ve arwen</div>
+      <div class="box">selin ve cemre ve arwen</div>
+      <div class="box">selin ve cemre ve arwen</div>
+      <div class="box">selin ve cemre ve arwen</div>
+      <div class="box">selin ve cemre ve arwen</div>
+      <div class="box">selin ve cemre ve arwen</div>
+      <div class="box">selin ve cemre ve arwen</div>
+      <div class="box">selin ve cemre ve arwen</div>
+      <div class="box">selin ve cemre ve arwen</div>
+      <div class="box">selin ve cemre ve arwen</div>
+      <div class="box">selin ve cemre ve arwen</div>
+      <div class="box cemre">selin ve cemre ve arwen burası</div>
+      <div class="box">selin ve cemre ve arwen</div>
+      <div class="box">selin ve cemre ve arwen</div>
+      <div class="box item8">selin ve cemre ve arwen</div>
+    </div>
+
+    <hr />
+
+    <div class="grid-container">
+      <div class="item1">she is</div>
+      <div class="item2">sweet</div>
+      <div class="item3">but a</div>
+      <div class="item4">psycho</div>
+      <div class="item5">ohh</div>
+      <div class="item6">xd</div>
+    </div>
+  </body>
+</html>
