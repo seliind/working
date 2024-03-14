@@ -1,0 +1,19 @@
+.testimonial-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+@media (min-width: 50em) {
+  .grid-col-span-2 {
+    grid-column: span 2;
+  }
+  .testimonial-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .testimonial:last-child {
+    grid-column: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    /* grid-row-end: span 2; bu da grid-row-end ile aynı sonuca ulaştırır seni*/
+    /* grid-row: 1 / span 2; ya da sadece grid-column-start ve bu da aynı sonucu verir*/
+  }
+}
