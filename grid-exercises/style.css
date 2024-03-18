@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  height: 100vh;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+.banner {
+  height: -webkit-fill-available;
+  margin: auto;
+}
+.container {
+  padding: 2rem 6rem 2rem 1rem;
+}
+.item {
+  display: flex;
+}
+.content2 {
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+.title {
+  font-size: 4em;
+  font-weight: 500;
+  margin-bottom: 27px;
+}
+p {
+  line-height: 160%;
+  font-size: 18px;
+}
+section {
+  position: relative;
+  height: 100vh;
+  background-image: url("https://images.pexels.com/photos/10366328/pexels-photo-10366328.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.container.background {
+  position: absolute;
+  background: white;
+  padding: 2rem;
+}
