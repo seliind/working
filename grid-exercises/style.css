@@ -4,13 +4,11 @@
   box-sizing: border-box;
 }
 main {
-  height: 100vh;
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column-reverse;
 }
 .banner {
-  height: -webkit-fill-available;
+  height: 25rem;
   margin: auto;
 }
 .container {
@@ -19,7 +17,34 @@ main {
 .item {
   display: flex;
 }
-.content2 {
+.item.images {
+  justify-items: center;
+  display: grid;
+  grid-template-areas:
+    "one two"
+    "three two"
+    "four five";
+  margin-bottom: 5rem;
+}
+img {
+  width: 12rem;
+}
+.img1 {
+  grid-area: two;
+}
+.img2 {
+  grid-area: one;
+}
+.img3 {
+  grid-area: three;
+}
+.img4 {
+  grid-area: four;
+}
+.img5 {
+  grid-area: five;
+}
+.content {
   justify-content: start;
   align-items: center;
   gap: 1rem;
@@ -33,7 +58,7 @@ p {
   line-height: 160%;
   font-size: 18px;
 }
-section {
+.main-div {
   position: relative;
   height: 100vh;
   background-image: url("https://images.pexels.com/photos/10366328/pexels-photo-10366328.jpeg");
@@ -41,8 +66,43 @@ section {
   background-position: center;
   background-size: cover;
 }
-.container.background {
+.absolute {
   position: absolute;
   background: white;
   padding: 2rem;
+  top: 20%;
+  right: 5rem;
+  left: 5rem;
+}
+@media (min-width: 1250px) {
+  main {
+    height: 100vh;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .item.images {
+    display: grid;
+    grid-gap: 10px;
+    padding: 30px;
+    grid-template-areas: "one one two two" "three three two two" "four four five five";
+  }
+  img {
+    width: 24rem;
+  }
+  .img1 {
+    grid-area: two;
+  }
+  .img2 {
+    grid-area: one;
+  }
+  .img3 {
+    grid-area: three;
+  }
+  .img4 {
+    grid-area: four;
+  }
+  .img5 {
+    grid-area: five;
+  }
 }
