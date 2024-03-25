@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.banner {
+  height: 100vh;
+  display: grid;
+  grid-template-areas: "one one";
+  grid-template-columns: 1.5r 1fr;
+}
+.vinly {
+  margin: auto;
+}
+.menu {
+  background: #99b56d;
+  color: #e3ecd5;
+  place-content: center;
+}
+.vinly-img {
+  width: 30rem;
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  font-size: x-large;
+  margin: 8rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #f7f7f7;
+  transition: border-width 0.1s linear;
+  cursor: pointer;
+}
+li:hover {
+  border-width: 2px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
