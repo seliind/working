@@ -10,7 +10,7 @@ body {
   height: 100vh;
   display: grid;
   grid-template-areas: "one one";
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 .vinly {
   margin: auto;
@@ -23,7 +23,7 @@ p {
   background: #99b56d;
   color: #e3ecd5;
   place-content: center;
-  border-bottom: 2px solid white;
+  border-bottom: 1px solid white;
 }
 .vinly-img {
   width: 30rem;
@@ -44,26 +44,108 @@ li {
   border-bottom: 1px solid #f7f7f7;
   transition: border-width 0.1s linear;
   cursor: pointer;
+  padding-top: 1rem;
+  transition: background-color 1s ease-out;
 }
 li:hover {
-  border-width: 2px;
+  background-color: white;
+  color: black;
 }
 
 .main {
-  height: 100vh;
-  padding: 20px;
+  background: #6d76b5;
+  height: 50vh;
+  padding: 2px 10px;
   display: grid;
-  gap: 10px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  gap: 10rem;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
 }
 .box {
-  background: #6db5ad;
   margin: 20px;
   height: 20rem;
 }
-
+.card {
+  position: relative;
+  cursor: pointer;
+}
+.images {
+  display: flex;
+}
+.album-cover {
+  height: 20rem;
+  z-index: 1;
+}
+.album-cover:hover {
+  transform: translatex(2px);
+  animation: move 2s forwards;
+}
+.album-cover:hover + .absolute {
+  animation: rotate 4s infinite;
+}
+.absolute {
+  width: 20rem;
+  position: absolute;
+  left: 8rem;
+}
+.absolute:hover {
+  animation: rotate 2s ease-in-out;
+}
+.albumname {
+  font-weight: 300;
+  margin-top: 15px;
+  text-align: justify;
+  color: white;
+}
+.section {
+  height: 50vh;
+  background: #ad6db5;
+  padding: 2px 10px;
+  display: grid;
+  align-items: center;
+  gap: 10rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+.article {
+  background: #9a9b80;
+  height: 25vh;
+}
+.article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.quote {
+  font-weight: 400;
+  font-size: xx-large;
+  color: white;
+}
+.writer {
+  font-size: large;
+  font-weight: 300;
+  color: white;
+  margin: 0;
+}
 @keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes move {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-16px);
+  }
+}
+@keyframes rotate {
   from {
     transform: rotate(0deg);
   }
